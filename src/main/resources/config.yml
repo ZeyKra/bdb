@@ -1,0 +1,16 @@
+#Locations
+pos1:
+  world: world
+  x: -78.0
+  y: 73.0
+  z: 167.0
+pos2:
+  world: world
+  x: -74.0
+  y: 76.0
+  z: 171.0
+#Config BDB
+autostart: false #si l'autostart est activé quand le cap de joueur est bon l'event se lance tout seul
+autostart-number: 50 # nombre de joueurs nécéssaire pour l'autostart
+#Cette variable est utilisé pour detecter si le jeu est démarrer, pas nécéssaire de la modifier
+started: false

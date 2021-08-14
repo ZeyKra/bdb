@@ -1,0 +1,9 @@
+name: BDB
+version: 1.0
+main: fr.zeykra.bdb.BDB
+authors: [ ZeyKra_ ]
+description: Event Bûtin des Berchta
+commands:
+  bdb:
+    permission: bdb.admin
+    description: Command principale

@@ -1,0 +1,31 @@
+#Nom de chaque items
+gold-ingot-name: '&6Gold ingot'
+gold-nugget-name: '&6Gold nugget'
+mycelium-name: '&7Mycelium'
+
+#tout les broadcast de l'event
+bdb-start-broadcast: 'L''event Butin des berchta viens de commencer' #de la commande /bdb start
+bdb-stop-broadcast: 'L''event Butin des bertcha viens de s''aretter' #de la commande /bdb stop
+bdb-autostart-stop: 'L''évènement Bûtin des Berchta vient d''être arrêté car le nombre de joueurs est trop faible.'
+bdb-autostart-start: 'L''évènement Bûtin des Berchta vient de reprendre car le nombre de joueur est suffisant'
+
+#tout les messages envoyé au joueur pendant la capture
+player-startcapture-message: 'Vous commencez la capture du bdb'
+player-quitcapture-message: 'Vous avez quitté la zone de capture du bdb'
+player-sucesscapture-message: 'Tu viens de gagner 1 pépite d''or nommé "X" car tu as capturé pendant 30 secondes le Bûtin des Berchta'
+
+#configuation de la Wand
+wand-name: '&cSélection'
+wand-recieved: 'Vous venez de recevoir l''outil de selection avancé'
+pos1-lore: '§cPos1: {LOCATION}'
+pos2-lore: '§aPos2: {LOCATION}'
+
+#Messages
+setpos1-message: 'Position 1 definite à {LOCATION}'
+setpos2-message: 'Potition 2 definite à {LOCATION}'
+autostart-true-message: 'Autostart activé'
+autostart-false-message: 'Autostart désactivé'
+
+#Messages erreur
+error-setpos: 'vous devez definir un chiffre entre 1 est 2'
+error-autostart: 'vous devez definir un argument true ou false'
