@@ -12,5 +12,6 @@ pos2:
 #Config BDB
 autostart: false #si l'autostart est activé quand le cap de joueur est bon l'event se lance tout seul
 autostart-number: 50 # nombre de joueurs nécéssaire pour l'autostart
+capture-time: 30 #seconds nécéssaire pour capturer le point
 #Cette variable est utilisé pour detecter si le jeu est démarrer, pas nécéssaire de la modifier
 started: false

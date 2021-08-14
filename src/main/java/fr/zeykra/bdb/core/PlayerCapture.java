@@ -36,7 +36,7 @@ public class PlayerCapture implements Listener {
                     UUID uuid = e.getKey();
                     Player player = Bukkit.getPlayer(uuid);
                     playersCaptureTime.put(uuid, playersCaptureTime.get(uuid) + 0.1);
-                    if(playersCaptureTime.get(uuid) >= 5) {
+                    if(playersCaptureTime.get(uuid) >= config.getInt("capture-time")) {
                         captureSucessPlayer(player);
                     }
                 }
