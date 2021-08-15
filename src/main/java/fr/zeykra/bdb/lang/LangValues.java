@@ -28,4 +28,9 @@ public class LangValues {
                 " z:" + location.getZ();
         return txt.replace("{LOCATION}", res);
     }
+
+    public static String customFormat(String txt, String var, String replace) {
+        return txt.replace(var, replace);
+    }
+
 }

@@ -22,8 +22,8 @@ public class SubCommandWand extends SubCommand {
         return "/bdb wand";
     }
 
-
-    YmlFileUtil lang = new YmlFileUtil(BDB.getPlugin(BDB.class).getDataFolder().toPath().toString(), "lang.yml");
+    BDB instance = BDB.getPlugin(BDB.class);
+    YmlFileUtil lang = new YmlFileUtil(instance.getDataFolder().toPath().toString(), "lang.yml");
     @Override
     public void perform(Player player, String[] args) {
         player.getInventory().addItem(Item.Wand());

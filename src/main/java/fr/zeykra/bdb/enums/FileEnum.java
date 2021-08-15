@@ -14,17 +14,18 @@ public enum FileEnum {
 
     private final String fileName;
     private final File dataFolder;
+    private final BDB instance = BDB.getPlugin(BDB.class);
 
     FileEnum(String fileName) {
         this.fileName = fileName;
-        this.dataFolder = BDB.getInstance().getDataFolder();
+        this.dataFolder = instance.getDataFolder();
     }
 
     public void create(Logger logger) {
         if(fileName == null || fileName.isEmpty()) {
             throw new IllegalArgumentException("ResourcePath cannot be found");
         }
-        InputStream in = BDB.getInstance().getResource(fileName);
+        InputStream in = instance.getResource(fileName);
         if(in == null) {
             throw new IllegalArgumentException(fileName + "n'a pas était trouvé dans les sources du .jar");
         }

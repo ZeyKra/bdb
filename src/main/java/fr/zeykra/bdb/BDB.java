@@ -11,10 +11,15 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class BDB extends JavaPlugin {
     private Settings settings;
-    private static BDB instance;
 
     @Override
     public void onEnable() {
+
+        //Création des fichier config / lang
+        FileEnum config = FileEnum.CONFIG;
+        config.create(getLogger());
+        FileEnum lang = FileEnum.LANG;
+        lang.create(getLogger());
 
         //register de la commande
         this.getCommand("bdb").setExecutor(new CommandManager());
@@ -25,23 +30,10 @@ public final class BDB extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new WandEvent(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoinEvent(), this);
 
-        instance = this;
-
-        //Création des fichier config / lang
-        FileEnum config = FileEnum.CONFIG;
-        config.create(getLogger());
-        FileEnum lang = FileEnum.LANG;
-        lang.create(getLogger());
-
-
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-    }
-
-    public static BDB getInstance() {
-        return instance;
     }
 }

@@ -1,5 +1,5 @@
 name: BDB
-version: 1.0
+version: 1.1.0
 main: fr.zeykra.bdb.BDB
 authors: [ ZeyKra_ ]
 description: Event Bûtin des Berchta

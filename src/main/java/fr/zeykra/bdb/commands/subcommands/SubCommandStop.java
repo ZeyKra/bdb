@@ -22,8 +22,9 @@ public class SubCommandStop extends SubCommand {
         return "/bdb stop";
     }
 
-    YmlFileUtil lang = new YmlFileUtil(BDB.getPlugin(BDB.class).getDataFolder().toPath().toString(), "lang.yml");
-    YmlFileUtil config = new YmlFileUtil(BDB.getPlugin(BDB.class).getDataFolder().toPath().toString(), "config.yml");
+    BDB instance = BDB.getPlugin(BDB.class);
+    YmlFileUtil lang = new YmlFileUtil(instance.getDataFolder().toPath().toString(), "lang.yml");
+    YmlFileUtil config = new YmlFileUtil(instance.getDataFolder().toPath().toString(), "config.yml");
 
     @Override
     public void perform(Player player, String[] args) {

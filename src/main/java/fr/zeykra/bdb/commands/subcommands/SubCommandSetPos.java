@@ -28,8 +28,9 @@ public class SubCommandSetPos extends SubCommand {
         return "/bdb setpos [1/2]";
     }
 
-    YmlFileUtil config = new YmlFileUtil(BDB.getPlugin(BDB.class).getDataFolder().toPath().toString(), "/config.yml");
-    YmlFileUtil lang = new YmlFileUtil(BDB.getPlugin(BDB.class).getDataFolder().toPath().toString(), "/lang.yml");
+    BDB instance = BDB.getPlugin(BDB.class);
+    YmlFileUtil config = new YmlFileUtil(instance.getDataFolder().toPath().toString(), "/config.yml");
+    YmlFileUtil lang = new YmlFileUtil(instance.getDataFolder().toPath().toString(), "/lang.yml");
 
     @Override
     public void perform(Player player, String[] args) {

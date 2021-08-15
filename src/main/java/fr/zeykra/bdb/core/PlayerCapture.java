@@ -2,6 +2,7 @@ package fr.zeykra.bdb.core;
 
 import fr.zeykra.bdb.BDB;
 import fr.zeykra.bdb.core.Item;
+import fr.zeykra.bdb.event.CraftEvent;
 import fr.zeykra.bdb.util.Cuboid;
 import fr.zeykra.bdb.util.YmlFileUtil;
 import org.bukkit.Bukkit;
@@ -69,6 +70,8 @@ public class PlayerCapture implements Listener {
         playersCaptureTime.put(player.getUniqueId(), 0.0);
         player.getInventory().addItem(Item.goldNugget());
         player.sendMessage(lang.getString("player-sucesscapture-message"));
+        CraftEvent.tryAutocraft(player, Item.goldNugget(), Item.goldIngot());
+        CraftEvent.tryAutocraft(player, Item.goldIngot(), Item.mycelium());
     }
 
     //Quand le joeur rentre dans le bdb

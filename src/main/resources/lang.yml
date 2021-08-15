@@ -14,6 +14,8 @@ player-startcapture-message: 'Vous commencez la capture du bdb'
 player-quitcapture-message: 'Vous avez quitté la zone de capture du bdb'
 player-sucesscapture-message: 'Tu viens de gagner 1 pépite d''or nommé "X" car tu as capturé pendant 30 secondes le Bûtin des Berchta'
 
+autocraft-message: '{RESULTITEM} Viens d''être craft automatiquement car tu avais 9 {RECIPEITEM}'
+
 #configuation de la Wand
 wand-name: '&cSélection'
 wand-recieved: 'Vous venez de recevoir l''outil de selection avancé'

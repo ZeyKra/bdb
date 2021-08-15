@@ -126,7 +126,7 @@ public class YmlFileUtil {
     public void setLoc(Location loc) { setLoc(configSection, loc); }
 
     //getter
-    public Location getLoc() {return getLoc(configSection); }
+    public Location getLoc() { return getLoc(configSection); }
 
     public Location getLoc(ConfigurationSection configurationSection) {
         World world = Bukkit.getWorld(configurationSection.getString("world"));
