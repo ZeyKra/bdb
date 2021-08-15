@@ -45,8 +45,6 @@ public class CraftEvent implements Listener {
 
     }
 
-    static Material[] autoCraftItems = {Material.GOLD_NUGGET, Material.GOLD_INGOT};
-
     public static void tryAutocraft(Player player, ItemStack recipeItem, ItemStack resultItem) {
 
         int n = 0;

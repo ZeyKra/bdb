@@ -31,7 +31,6 @@ public class PlayerJoinEvent implements Listener {
     @EventHandler
     public void onQuit(PlayerQuitEvent e) {
         Player player = e .getPlayer(); // si le nombre de joueur est insuffisant
-        System.out.println(Bukkit.getServer().getOnlinePlayers().size() );
         config = new YmlFileUtil(BDB.getPlugin(BDB.class).getDataFolder().toPath().toString(), "config.yml");
         if(config.getBoolean("autostart") == true && config.getBoolean("started") == true) {
              if ((Bukkit.getServer().getOnlinePlayers().size() - 1) < config.getInt("autostart-number")) {
