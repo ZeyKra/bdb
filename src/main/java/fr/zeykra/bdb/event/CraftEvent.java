@@ -58,6 +58,7 @@ public class CraftEvent implements Listener {
             if(n >= 9) {
                 for(int i = 0 ; i < 9; i++) {
                     player.getInventory().removeItem(recipeItem);
+                    player.updateInventory();
                 }
                 String message = LangValues.customFormat(lang.getString("autocraft-message"), "{RECIPEITEM}", recipeItem.getItemMeta().getDisplayName() + "§r");
                 player.sendMessage(LangValues.customFormat(message, "{RESULTITEM}", resultItem.getItemMeta().getDisplayName() + "§r"));

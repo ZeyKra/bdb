@@ -7,6 +7,7 @@ import fr.zeykra.bdb.event.CraftEvent;
 import fr.zeykra.bdb.core.PlayerCapture;
 import fr.zeykra.bdb.event.PlayerJoinEvent;
 import fr.zeykra.bdb.event.WandEvent;
+import fr.zeykra.bdb.util.YmlFileUtil;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class BDB extends JavaPlugin {
@@ -29,6 +30,11 @@ public final class BDB extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerCapture(), this);
         getServer().getPluginManager().registerEvents(new WandEvent(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoinEvent(), this);
+
+        YmlFileUtil configg = new YmlFileUtil(this.getDataFolder().toPath().toString(), "config.yml");
+        if(configg.getBoolean("started") == true) {
+            PlayerCapture.startCaptureRunnable();
+        }
 
     }
 
