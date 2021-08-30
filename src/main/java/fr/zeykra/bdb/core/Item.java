@@ -4,6 +4,8 @@ import fr.zeykra.bdb.BDB;
 import fr.zeykra.bdb.util.ColorUtil;
 import fr.zeykra.bdb.util.YmlFileUtil;
 import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -37,6 +39,8 @@ public class Item {
 
         ItemMeta im = item.getItemMeta();
         im.setDisplayName(ColorUtil.format(lang.getString("mycelium-name")));
+        im.addEnchant(Enchantment.KNOCKBACK, 1, true);
+        im.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         item.setItemMeta(im);
         return item;
     }

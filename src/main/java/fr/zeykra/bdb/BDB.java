@@ -5,6 +5,7 @@ import fr.zeykra.bdb.commands.CommandManager;
 import fr.zeykra.bdb.enums.FileEnum;
 import fr.zeykra.bdb.event.CraftEvent;
 import fr.zeykra.bdb.core.PlayerCapture;
+import fr.zeykra.bdb.event.MyceliumEvent;
 import fr.zeykra.bdb.event.PlayerJoinEvent;
 import fr.zeykra.bdb.event.WandEvent;
 import fr.zeykra.bdb.util.YmlFileUtil;
@@ -30,6 +31,7 @@ public final class BDB extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerCapture(), this);
         getServer().getPluginManager().registerEvents(new WandEvent(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoinEvent(), this);
+        getServer().getPluginManager().registerEvents(new MyceliumEvent(), this);
 
         YmlFileUtil configg = new YmlFileUtil(this.getDataFolder().toPath().toString(), "config.yml");
         if(configg.getBoolean("started") == true) {

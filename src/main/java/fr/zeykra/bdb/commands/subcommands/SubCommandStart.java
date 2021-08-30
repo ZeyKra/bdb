@@ -30,6 +30,11 @@ public class SubCommandStart extends SubCommand { // /prank freeze
     @Override
     public void perform(Player player, String[] args) {
 
+        if(config.getBoolean("started") == true) {
+            player.sendMessage(lang.getString("error-started"));
+            return;
+        }
+
         PlayerCapture.startCaptureRunnable();
         player.getServer().broadcastMessage(lang.getString("bdb-start-broadcast"));
 

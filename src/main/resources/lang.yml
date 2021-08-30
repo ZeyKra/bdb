@@ -31,3 +31,4 @@ autostart-false-message: 'Autostart désactivé'
 #Messages erreur
 error-setpos: 'vous devez definir un chiffre entre 1 est 2'
 error-autostart: 'vous devez definir un argument true ou false'
+error-started: 'L''event est déjà lancé'
